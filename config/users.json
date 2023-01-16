@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.stackexchange.com/2.3/users",
+        "method": "GET",
+        "params": {
+            "site": "stackoverflow"
+        },
+        "pagination": {
+            "type": "page",
+            "pageKey": "page",
+            "limitKey": "pagesize",
+            "maxCount": 50
+        }
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$.items[*]",
+        "schema": {
+            "account_id": {
+                "target": "$.account_id",
+                "type": "int"
+            },
+            "location": {
+                "target": "$.location",
+                "type": "string"
+            },
+            "display_name": {
+                "target": "$.display_name",
+                "type": "string"
+            }
+        },
+        "orient": "records"
+    }
+}
