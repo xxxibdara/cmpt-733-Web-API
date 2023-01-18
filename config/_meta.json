@@ -1,7 +1,10 @@
 {
     "tables": [
         "answers",
+        "questions",
         "users",
-        "comments"
+        "comments",
+        "search",
+        "tags"
     ]
 }

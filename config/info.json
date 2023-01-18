@@ -4,14 +4,20 @@
         "url": "https://api.stackexchange.com/2.3/info",
         "method": "GET",
         "params": {
-            "site": "stackoverflow",
-            "term": false
+            "site": true,
+            "term": false,
+            "key":true
         },
         "pagination": {
             "type": "page",
             "pageKey": "page",
             "limitKey": "pagesize",
             "maxCount": 50
+        },
+        "authorization": {
+            "type": "QueryParam",
+            "keyParam": "access_token"
+            
         },
         "search":{
             "key": "term"
